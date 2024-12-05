@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Quản lý sản phẩm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fa-solid fa-lock" style="color: #ffffff;"></i>
+        Quản trị viên
+      </a>
+      <a href="../muahang/Home.html" class="btn btn-primary">Đăng xuất</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-table" style="color: #ffffff;"></i>
+                Sản phẩm
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Qlyhoadon.html">
+                <i class="fa-solid fa-receipt" style="color: #ffffff;"></i>
+                Quản lý hóa đơn
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Qlytkkhachhang.html">
+                <i class="fa-solid fa-users" style="color: #ffffff;"></i>
+                Quản lý tài khoản khách hàng
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section id="sanpham">
+    <div class="container mt-5">
+      <!-- Tiêu đề -->
+      <h1 class="text-center mb-4 mt-5">Quản lý sản phẩm</h1>
+      <!-- Bảng danh sách sản phẩm -->
+      <div class="card mb-5">
+        <div class="card-header bg-primary text-white">Danh sách sản phẩm</div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th>#</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá (VNĐ)</th>
+                <th>Số lượng</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Dữ liệu mẫu -->
+              <tr>
+                <td>1</td>
+                <td>Táo Mỹ</td>
+                <td>50,000</td>
+                <td>100</td>
+                <td>
+                  <button class="btn btn-warning btn-sm">Sửa</button>
+                  <button class="btn btn-danger btn-sm">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Cam Úc</td>
+                <td>80,000</td>
+                <td>50</td>
+                <td>
+                  <button class="btn btn-warning btn-sm">Sửa</button>
+                  <button class="btn btn-danger btn-sm">Xóa</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Form thêm sản phẩm mới -->
+      <div class="card">
+        <div class="card-header bg-success text-white">Thêm sản phẩm mới</div>
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <label for="productName" class="form-label">Tên sản phẩm</label>
+              <input type="text" id="productName" class="form-control" placeholder="Nhập tên sản phẩm">
+            </div>
+            <div class="mb-3">
+              <label for="productPrice" class="form-label">Giá (VNĐ)</label>
+              <input type="number" id="productPrice" class="form-control" placeholder="Nhập giá sản phẩm">
+            </div>
+            <div class="mb-3">
+              <label for="productQuantity" class="form-label">Số lượng</label>
+              <input type="number" id="productQuantity" class="form-control" placeholder="Nhập số lượng">
+            </div>
+            <button type="submit" class="btn btn-success">Thêm sản phẩm</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
